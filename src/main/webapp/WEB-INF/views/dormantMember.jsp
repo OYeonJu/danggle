@@ -9,12 +9,11 @@
 <link rel="stylesheet" type="text/css" href="/resources/css/dormantMember.css">
 </head>
 <body>
-<div class="header"></div>
+<%@ include file="/WEB-INF/views/common/header.jsp"%>
 
 	  <div class="form">
 	    <form class="login-form" action="/wakeUpDormantMember.do" method="post">
 	      <h2>휴면 계정 안내</h2>
-	      <hr>
 	      ${requestScope.member.memberId}님은 1년 이상 로그인하지 않아<br> 휴면 상태로 전환되었습니다.<br><br>
 	      <input type="hidden" name="memberId" value="${requestScope.member.memberId}">
 	      <input type="hidden" name="memberPwd" value="${requestScope.member.memberPwd}">
@@ -24,6 +23,6 @@
 	    </form>
 	  </div>
 	  
-<div class="footer"></div>
+	  <%@ include file="/WEB-INF/views/common/footer.jsp"%>
 </body>
 </html>

@@ -10,7 +10,8 @@
 integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="header"><%@ include file="/WEB-INF/views/mainPageView/mainHeader.jsp" %></div>
+<%@ include file="/WEB-INF/views/common/header.jsp"%>
+
 	  <div class="form">
 	      <h2 id="title">비밀번호 찾기</h2>
 	      <input type="text" id="memberId" placeholder="아이디를 입력하세요"/>
@@ -18,7 +19,7 @@ integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="ano
 	      <button class="longBtn" id="sendEmailCodeBtn"><b>인증번호 받기</b></button>
 	      <br id="br">
 	      
-	      <input type="text" id="findPwdCode" placeholder="6자리 코드 입력" style="display:none; margin:0px; width:185px;"/>
+	      <input type="text" id="findPwdCode" placeholder="6자리 코드 입력" style="display:none; margin:0px; width:205px;"/>
 	      <button class="smallBtn" id="resendBtn" style="display:none;">재전송</button>
 	      <div id="timer" style="display:none;"></div>
 	      <button class="longBtn" id="findPwdBtn" style="display:none;">비밀번호 찾기</button>
@@ -28,7 +29,7 @@ integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="ano
 	      <button class="longBtn" id="changePwdBtn" style="display:none;">비밀번호 변경</button>
 	      
 	  </div>
-<div class="footer"><%@ include file="/WEB-INF/views/mainPageView/mainFooter.jsp" %></div>
+<%@ include file="/WEB-INF/views/common/footer.jsp"%>
 
 <script>
 let x; // 전역 timer 변수

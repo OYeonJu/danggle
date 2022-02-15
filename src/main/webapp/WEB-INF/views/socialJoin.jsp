@@ -11,7 +11,7 @@
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
 <body>
-    <div class="header"><%@ include file="/WEB-INF/views/mainPageView/mainHeader.jsp" %></div>
+    <%@ include file="/WEB-INF/views/common/header.jsp"%>
 	<form action="/socialJoin.do" method="post">
         <h2>추가 입력 사항</h2>
         <fieldset>
@@ -42,7 +42,7 @@
           <label>닉네임<a style="color:red">*</a></label>
           <input type="text" id="nickname" name="nickname" placeholder="${requestScope.userInfo.nickname}" value="${requestScope.userInfo.nickname}"readonly>
           
-          <label>성별<a style="color:red">*</a></label><br>
+          <label>성별<a style="color:red">*</a></label>
           <input type="radio" value="M" name="gender" checked>
           <label for="gender" class="light">남자</label>&emsp;
           
@@ -50,7 +50,7 @@
           <label for="gender" class="light">여자</label>
           <br><br>
           
-          <label>생년월일</label><br>
+          <label>생년월일</label>
 		        <select name="yy" id="year" style="width:90px;" onchange="changeBirthdate();">
 		        	<option value="" selected hidden>--</option>
 		        	<option value="">--</option>
@@ -66,14 +66,14 @@
 				<input type="text" id="birthdate" name="birthdate" value="" style="display:none;">
 	          <br>
           
-          <label for="address">주소</label><br>
+          <label for="address">주소</label>
 	      <input type="text" name="address" style="margin-bottom: 3px;"placeholder="주소">
 	      <input type="text" name="detailAddress" placeholder="상세 주소">
        
         <button type="submit" onClick="checkForm()">가입하기</button>
         </fieldset>
       </form>
-<div class="footer"><%@ include file="/WEB-INF/views/mainPageView/mainFooter.jsp" %></div>
+<%@ include file="/WEB-INF/views/common/footer.jsp"%>
    
       <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
 		<script>

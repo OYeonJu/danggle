@@ -10,7 +10,7 @@
 integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 </head>
 <body>
-<div class="header"><%@ include file="/WEB-INF/views/mainPageView/mainHeader.jsp" %></div>
+<%@ include file="/WEB-INF/views/common/header.jsp"%>
 
 	  <div class="form">
 	      <h2>아이디 찾기</h2>
@@ -28,7 +28,7 @@ integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="ano
 	      <a href="/resources/views/login.jsp" class="longBtn" id="loginBtn" style="display:none;">로그인하기</a>
 	  </div>
 	  
-<div class="footer"><%@ include file="/WEB-INF/views/mainPageView/mainFooter.jsp" %></div>
+<%@ include file="/WEB-INF/views/common/footer.jsp"%>
 
 <script>
 let x; // 전역 timer 변수

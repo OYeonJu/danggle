@@ -6,7 +6,7 @@
 }
 
 .login-form{
-	width: 260px;
+	width: 300px;
 }
 
 .icon_box{
@@ -39,9 +39,9 @@ input::placeholder{
   position: relative;
   z-index: 1;
   background: #FFFFFF;
-  max-width: 400px;
+  max-width: 300px;
   margin: 105px auto;
-  padding: 35px 70px 55px 70px;
+  padding: 60px 70px 60px 70px;
   text-align: center;
   filter:drop-shadow(4px 4px 4px rgba(0,0,0,0.1));
   

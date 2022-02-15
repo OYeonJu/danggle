@@ -66,7 +66,7 @@ img{
 form {
   max-width: 430px;
   margin: 105px auto;
-  padding: 30px;
+  padding: 15px;
   background: #ffffff;
   border-top-left-radius : 0px;
   border-top-right-radius : 0px;
@@ -142,7 +142,7 @@ fieldset {
   margin-bottom: 10px;
   margin-top: 20px;
   border: none;
-  padding: 35px 70px 35px 70px;
+  padding: 20px;
 }
 
 legend {
