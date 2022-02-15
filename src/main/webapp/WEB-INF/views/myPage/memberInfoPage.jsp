@@ -11,7 +11,7 @@
 <head>
 <meta charset="UTF-8">
 <title>회원 정보</title>
-
+<link rel="stylesheet" type="text/css" href="/resources/css/memberInfoPage.css?d">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
@@ -20,223 +20,34 @@
 
 
 <style>
-* {
-	box-sizing: border-box;
-	font-family: 'Noto Sans KR', sans-serif;
-	font-size: 15px;
-	font-weight: bold;
-	color: #919CA7;
-}
 
-.wrap {
-	border: 1px solid black;
-	width: 100%;
-	height: 1517px;
-	background: #FAFBFE;
-}
-
-/*header(헤더)*/
-.header {
-	border: 1px solid black;
-	width: 100%;
-	height: 240px;
-	background: #FFFFFF;
-}
-
-/*container(컨테이너)*/
-.container {
-	/*border: 1px solid black;*/
-	width: 1440px;
-	height: 1042px;
-	margin: 0 auto;
-}
-
-/*사이드 네비*/
-.navi {
-	border: 1px solid #eef2f7;
-	width: 268px;
-	height: 825px;
-	position: relative;
-	top: 105px;
-	border-radius: 5px;
-	float: left;
-	background: #FFFFFF;
-	filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.10));
-}
-
-.side_menu {
-	margin-top: 64px;
-}
-
-.side_menu>li {
-	margin-bottom: 45px;
-	list-style: none;
-}
-
-.side_menu>li>a {
-	color: #919CA7;
-	text-decoration: none;
-}
-
-.side_menu>li:first-child>a {
-	color: #000000;
-}
-
-.side_menu>li:hover>a {
-	color: #000000;
-}
-
-.side_menu>li:hover ul {
-	display: block;
-}
-
-.side_submenu {
-	padding-left: 15px;
-	display: none;
-}
-
-.side_submenu>li {
-	list-style: none;
-	margin: 10px 0 10px 0;
-}
-
-.side_submenu>li>a {
-	color: #919CA7;
-	text-decoration: none;
-	font-size: 13px;
-}
-
-.side_submenu>li:hover>a {
-	color: #000000;
-}
-
-/*컨텐츠*/
-.content {
-	border: 1px solid #eef2f7;
-	width: 1152px;
-	height: 825px;
-	position: relative;
-	top: 105px;
-	border-radius: 5px;
-	float: right;
-	background: #FFFFFF;
-	text-align: center;
-	filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.10));
-}
-
-.content>p {
-	font-size: 25px;
-	margin: 0;
-	position: relative;
-	top: 64px;
-	color: #000000;
-}
-
-.img {
-	border: 1px solid #eef2f7;
-	background-color: #FD6F22;
-	width: 121px;
-	height: 116px;
-	border-radius: 100%;
-	position: relative;
-	top: 130px;
-	left: 515px;
-}
-
-img {
-	width: 100%;
-	height: 100%;
-	object-fit: fill;
-	border-radius: 100%;
-	
-}
-
-/*출력 폼*/
-.user_info_table {
-	/* border: 1px solid red;*/
-	width: 400px;
-	height: 420px;
-	position: relative;
-	top: 157px;
-	text-align: left;
-	margin: 0 auto;
-}
-
-table tr td {
-	height: 50px;
-	/* vertical-align: top;*/
-}
-
-table tr td:last-child {
-	padding-left: 34px;
-}
-
-.pwd_change_btn {
-	border: 1px solid #FD6F22;
-	background-color: #ffffff;
-	width: 120px;
-	height: 40px;
-	border-radius: 5px;
-	cursor: pointer;
-	filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.10));
-}
-
-.modify_btn, .withdraw_btn {
-	border: 1px solid #FD6F22;
-	background-color: #ffffff;
-	border-radius: 5px;
-	cursor: pointer;
-	filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.10));
-}
-
-.btn {
-	/*border: 1px solid #FD6F22;*/
-	position: relative;
-	bottom: -180px;
-}
-
-.modify_btn {
-	width: 67px;
-	height: 35px;
-	margin: 0 15px;
-	filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.10));
-}
-
-.withdraw_btn {
-	width: 80px;
-	height: 35px;
-	left: 1076px;
-	margin: 0 15px;
-	filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.10));
-}
-
-/*footer(풋터)*/
-.footer {
-	border: 1px solid black;
-	width: 100%;
-	height: 235px;
-	background-color: dimgrey;
-}
 </style>
 
 <script>
         /*수정 폼으로 변경*/
         function change_form() {
 
-            var popupWidth = 500;
-            var popupHeight = 300;
+        	var authProvider='${sessionScope.member.authProvider }';
+        	if(authProvider==''){
+        		var popupWidth = 500;
+                var popupHeight = 300;
 
-            var popupX = (window.screen.width / 2) - (popupWidth / 2);
-            var popupY = (window.screen.height / 2) - (popupHeight);
+                var popupX = (window.screen.width / 2) - (popupWidth / 2);
+                var popupY = (window.screen.height / 2) - (popupHeight);
 
+                
+                window.open("/myPage/checkPwdPage.do", '_blank', 'status=no,width=' + popupWidth + ', height=' + popupHeight + ',left=' + popupX + ',top=' + popupY);
+	
+        	}else{
+        		location.replace("/myPage/updateMemberInfoPage.do");	
+        	}
             
-            window.open("/myPage/checkPwdPage.do", '_blank', 'status=no,width=' + popupWidth + ', height=' + popupHeight + ',left=' + popupX + ',top=' + popupY);
-
+            
         }
 
         /*비밀 번호 변경 팝업*/
         function pwd_change_page() {
-            var popupWidth = 500;
+            var popupWidth = 550;
             var popupHeight = 500;
 
             var popupX = (window.screen.width / 2) - (popupWidth / 2);
@@ -249,17 +60,25 @@ table tr td:last-child {
         /* 회원 탈퇴  */
         function withdraw_form(){
         	
-        	if(window.confirm('탈퇴하시겠습니까? \n- 탈퇴시 복구 절대 불가능 -')){
-        		 var popupWidth = 500;
-                 var popupHeight = 300;
+        	var authProvider='${sessionScope.member.authProvider }';
+        	
+        	if(authProvider==''){
+        		if(window.confirm('탈퇴하시겠습니까? \n- 탈퇴시 복구 절대 불가능 -')){
+           		 	var popupWidth = 500;
+                    var popupHeight = 300;
 
-                 var popupX = (window.screen.width / 2) - (popupWidth / 2);
-                 var popupY = (window.screen.height / 2) - (popupHeight);
+                    var popupX = (window.screen.width / 2) - (popupWidth / 2);
+                    var popupY = (window.screen.height / 2) - (popupHeight);
 
-                 
-                 window.open("/myPage/withdrawCheckPage.do", '_blank', 'status=no,width=' + popupWidth + ', height=' + popupHeight + ',left=' + popupX + ',top=' + popupY);
+                    
+                    window.open("/myPage/withdrawCheckPage.do", '_blank', 'status=no,width=' + popupWidth + ', height=' + popupHeight + ',left=' + popupX + ',top=' + popupY);
+	           	}
+	
+        	}else{
+        		alert('소셜 로그인 고객은 해당 소셜에서 탈퇴 진행해주세요.');
         	}
-        
+        	
+        	        
         }
 
     </script>
@@ -269,9 +88,10 @@ table tr td:last-child {
 <body>
 
 	<div class="wrap">
-		<div class="header"></div>
+		<!--header(헤더)-->
+		<%@ include file="/WEB-INF/views/common/header.jsp"%>
 		<div class="container">
-			<div class="navi">
+			<div class="naviSide">
 				<ul class="side_menu">
 					<li><a href="">마이 페이지</a>
 						<ul class="side_submenu">
@@ -288,7 +108,7 @@ table tr td:last-child {
 					<c:set var="memberProfile"
 						value="${sessionScope.member.memberProfile }" />
 					<c:choose>
-						<c:when test="${fn:contains(memberProfile,'null') }">
+						<c:when test="${memberProfile==null ||fn:contains(memberProfile,'null') }">
 							<img src="/resources/images/user_icon.png"></img>
 						</c:when>
 						<c:otherwise>
@@ -304,11 +124,13 @@ table tr td:last-child {
 							<td width='90px'>아이디</td>
 							<td>${sessionScope.member.memberId }</td>
 						</tr>
-						<tr>
-							<td>비밀번호</td>
-							<td><button class="pwd_change_btn"
-									onclick="pwd_change_page()">비밀번호 변경</button></td>
-						</tr>
+						<c:if test="${sessionScope.member.authProvider=='' || sessionScope.member.authProvider==null}">
+							<tr>
+								<td>비밀번호</td>
+								<td><button class="pwd_change_btn" onclick="pwd_change_page()">비밀번호 변경</button></td>
+							</tr>
+						</c:if>
+						
 						<tr>
 							<td>닉네임</td>
 							<td>${sessionScope.member.nickname }</td>
@@ -327,15 +149,23 @@ table tr td:last-child {
 							</td>
 						</tr>
 						<tr>
+							<td>이메일</td>
+							<td>${sessionScope.member.email }</td>
+						</tr>
+						<tr>
 							<td>생년월일</td>
 							<td>
 								<c:set value="${sessionScope.member.birthdate }" var="birthdate"/>
-								${fn:substring(birthdate,0,4) }/${fn:substring(birthdate,4,6) }/${fn:substring(birthdate,6,8) }
+								<c:choose>
+									<c:when test="${birthdate==null or birthdate==''}">
+										<c:out value="${birthdate }"/>
+									</c:when>
+									<c:otherwise>
+										${fn:substring(birthdate,0,4) }/${fn:substring(birthdate,4,6) }/${fn:substring(birthdate,6,8) }
+									</c:otherwise>
+								</c:choose>
+								
 							</td>
-						</tr>
-						<tr>
-							<td>이메일</td>
-							<td>${sessionScope.member.email }</td>
 						</tr>
 						<tr>
 							<td>주소</td>
@@ -354,7 +184,8 @@ table tr td:last-child {
 				</div>
 			</div>
 		</div>
-		<div class="footer"></div>
+		<!-- footer(푸터) -->
+		<%@ include file="/WEB-INF/views/common/footer.jsp"%>
 	</div>
 
 

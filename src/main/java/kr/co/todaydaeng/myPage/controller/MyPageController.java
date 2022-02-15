@@ -32,6 +32,20 @@ public class MyPageController {
 	@Autowired
 	private ServletContext context;
 
+	/* 회원 정보 페이지 호출 */
+	@RequestMapping(value = "/myPage/memberInfoPage.do", method = RequestMethod.GET)
+	public String memberInfoPage(@SessionAttribute(required = false) Member member) {
+
+		
+		
+		if (member == null) {
+			return "/resources/views/member/login.jsp";
+		} else {
+			System.out.println("pro:"+member.getMemberProfile());
+			System.out.println("au:"+member.getAuthProvider());
+			return "myPage/memberInfoPage";
+		}
+	}
 
 	/* 회원 정보 수정 전 PWD 확인 페이지 호출 */
 	@RequestMapping(value = "/myPage/checkPwdPage.do", method = RequestMethod.GET)
@@ -54,7 +68,7 @@ public class MyPageController {
 		map.put("memberPwd", memberPwd);
 
 		Member m = mpService.selectPwdCheck(map);
-
+		
 		if (m != null) {
 			/* 세션 갱신 */
 			member = m;
@@ -181,7 +195,7 @@ public class MyPageController {
 			@SessionAttribute Member member, HttpServletResponse response) throws IOException {
 
 		String memberId = member.getMemberId();
-
+		System.out.println(originalMemberPwd);
 		HashMap<String, String> map = new HashMap<String, String>();
 		map.put("memberId", memberId);
 		map.put("originalMemberPwd", originalMemberPwd);

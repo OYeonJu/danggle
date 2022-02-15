@@ -29,6 +29,30 @@ public class MyPageAOP {
 
 		String encryptPwd = enc.encryptionData(memberPwd, memberId);
 		map.put("memberPwd", encryptPwd);
+		
+	}
+	
+	
+	@Pointcut("execution (int kr.co.todaydaeng.myPage.model.service.MyPageServiceImpl.updatePwdChange(..))")
+	public void updatePwdChangePointCut() {
+	}
+
+	@Before("updatePwdChangePointCut()")
+	public void updatePwdChangePointEncryption(JoinPoint jp) throws Exception {
+		HashMap<String, String> map = (HashMap<String, String>) jp.getArgs()[0];
+
+		String memberId = map.get("memberId");
+		String originalMemberPwd = map.get("originalMemberPwd");
+		String newMemberPwd = map.get("newMemberPwd");
+		
+		System.out.println(originalMemberPwd);
+		System.out.println(newMemberPwd);
+
+		String encryptPwd = enc.encryptionData(originalMemberPwd, memberId);
+		map.put("originalMemberPwd", encryptPwd);
+		
+		encryptPwd = enc.encryptionData(newMemberPwd, memberId);
+		map.put("newMemberPwd", encryptPwd);
 
 	}
 

@@ -1,0 +1,269 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #919CA7;
+}
+
+.wrap {
+	/* border: 1px solid red; */
+	width: 100%;
+	height: 1686px;
+	background: #FAFBFE;
+}
+
+/*header(헤더)*/
+.header {
+	border: 1px solid black;
+	width: 100%;
+	height: 240px;
+	background: #FFFFFF;
+}
+
+/*container(컨테이너)*/
+.container {
+	/* border: 1px solid red; */
+	width: 1440px;
+	height: 1211px;
+	margin: 0 auto;
+}
+
+/*제목*/
+.container>p {
+	font-size: 25px;
+	margin: 0;
+	position: relative;
+	top: 64px;
+	left: 6px;
+	color: #000000;
+}
+
+/*선택한 반려견 정보*/
+.dogInfo {
+	width: 1383px;
+	height: 159px;
+	background: #FFFFFF;
+	border: 1px solid #919CA7;
+	border-radius: 5px;
+	margin: 0 auto;
+	filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.10));
+	position: relative;
+	top: 120px;
+}
+
+.imgDiv {
+	width: 20%;
+	height: 100%;
+	background: #FFFFFF;
+	/*border: 1px solid red;*/
+	float: left;
+}
+
+.img {
+	border: 1px solid #FD6F22;
+	width: 130px;
+	height: 130px;
+	border-radius: 100%;
+	margin: 0 auto;
+	position: relative;
+	top: 14.5px;
+}
+
+img {
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+}
+
+.infoDiv {
+	width: 80%;
+	height: 100%;
+	background: #FFFFFF;
+	/*border: 1px solid blue;*/
+	float: left;
+	display: table;
+}
+
+.info {
+	border-collapse: collapse;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.info td:nth-child(odd) {
+	width: 100px;
+	height: 50px;
+}
+
+.info td:nth-child(even) {
+	width: 150px;
+}
+
+.diary {
+	width: 1383px;
+	height: 693px;
+	background: #FFFFFF;
+	border: 2px solid #FD6F22;
+	border-radius: 5px;
+	margin: 0 auto;
+	filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.10));
+	position: relative;
+	top: 150px;
+}
+
+.calendar {
+	/* border: 2px solid red; */
+	width: 70%;
+	height: 100%;
+	float: left;
+	-webkit-box-shadow: 5px 0 18px -3px rgb(0 0 0/ 15%);
+}
+
+.btn {
+	/* border: 2px solid red; */
+	width: 100%;
+	height: 6%;
+}
+
+.today {
+	border: 1px solid #FD6F22;
+	background-color: #FD6F22;
+	width: 50px;
+	height: 100%;
+	border-radius: 3px;
+	float: left;
+	text-align: center;
+	line-height: 38px;
+	color: #ffffff;
+	cursor: pointer;
+}
+
+.eventBtnDiv {
+	border: 1px solid #FD6F22;
+	background-color: #FD6F22;
+	width: 38px;
+	height: 100%;
+	border-radius: 3px;
+	float: right;
+}
+
+.eventBtn {
+	width: 37.094px;
+	height: 100%;
+}
+
+.calendarInfo {
+	/* border: 2px solid blue; */
+	width: 100%;
+	height: 94%;
+}
+
+.yearDate {
+	border: 3px solid #ffffff;
+	border-bottom-color: #FD6F22;
+	width: 800px;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.yearDate a {
+	font-size: 25px;
+	text-decoration: none;
+	margin-right: 10px;
+	color: #FD6F22;
+}
+
+.yearDate span {
+	font-size: 25px;
+	margin: 0 240px;
+	color: #FD6F22;
+}
+
+.content {
+	/* border: 2px solid blue; */
+	width: 30%;
+	height: 100%;
+	float: left;
+}
+
+input[type=text] {
+	width: 102px;
+	height: 31px;
+	border: 1px solid #919CA7;
+	border-radius: 5px;
+	padding: 0 10px;
+}
+
+input[name=feedName] {
+	width: 200px;
+	height: 31px;
+}
+
+.contentInfo {
+	margin: 0 auto;
+}
+
+.contentInfo td:nth-child(odd) {
+	width: 100px;
+	height: 50px;
+}
+
+.btnDiv {
+	/*border: 2px solid red;*/
+	width: 100%;
+	text-align: center
+}
+
+button {
+	border: 1px solid #FD6F22;
+	background-color: #FD6F22;
+	color: #ffffff;
+	width: 67px;
+	height: 35px;
+	border-radius: 5px;
+	cursor: pointer;
+	filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.10));
+	margin: 0 13px;
+}
+
+label {
+	margin-right: 30px;
+}
+
+textarea {
+	resize: none;
+}
+
+
+#calendar {
+	width: 90%;
+	height: 90%;
+	margin: 0 auto;
+	border-collapse: collapse;
+	text-align: center;
+}
+
+#calendar tr:first-child {
+	height: 50px;
+}
+
+a {
+	text-decoration: none;
+}
+
+.date {
+	width: 90px;
+	height: 90px;
+	border-radius: 100%;
+	margin: 0 auto;
+	text-align: center;
+	line-height: 90px;
+	cursor: pointer;
+}
+
+.date:hover {
+	background-color: #ffefe8;
+}
