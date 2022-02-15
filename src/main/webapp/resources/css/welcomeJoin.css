@@ -123,9 +123,13 @@ placeholder {
 }
 
 body {
-  background: #fafbfe; /* fallback for old browsers */
   font-family: 'Noto Sans KR', sans-serif;
+  background: #FAFBFE; /* fallback for old browsers */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size:15px;
+  font-weight:bold;
+  color:#919CA7;
   height: 100%;  
+  text-decoration: none;
 }

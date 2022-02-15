@@ -9,18 +9,18 @@
 
 body {
   font-family: 'Noto Sans KR', sans-serif;
-  color: #919CA7;
-  background: #fafbfe;
+  background: #FAFBFE; /* fallback for old browsers */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size:15px;
+  font-weight:bold;
+  color:#919CA7;
+  height: 100%;  
 }
 
 .header{
  background-color:white;
   height:240px;
-}
-
-.footer{
-	background-color:white;
-	height: 235px
 }
 
 input::placeholder{

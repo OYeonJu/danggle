@@ -13,7 +13,7 @@ integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="ano
 <%@ include file="/WEB-INF/views/common/header.jsp"%>
 
 	  <div class="form">
-	      <h2>아이디 찾기</h2>
+	      <h2 style="color:black;">아이디 찾기</h2>
 	      <input type="email" id="email" style="margin-bottom:1px;" placeholder="이메일을 입력하세요"/>
 	      <button class="longBtn" id="sendEmailCodeBtn">인증번호 받기</button>
 	      <br id="br">
