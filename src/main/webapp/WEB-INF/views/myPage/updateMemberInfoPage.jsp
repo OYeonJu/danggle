@@ -250,7 +250,6 @@
                         </ul>
                     </li>
                     <li><a href="/myPage/diaryPage.do">내 반려견 일기</a></li>
-                    <li><a href="/myPage/writeListPage.do">작성 글 보기</a></li>
                 </ul>
 
             </div>

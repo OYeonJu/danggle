@@ -45,7 +45,6 @@ public class MemberAOP {
 		String userId = m.getMemberId();
 		
 		String encryptPwd = enc.encryptionData(userPwd, userId);
-		System.out.println(encryptPwd);
 		m.setMemberPwd(encryptPwd);
 	}
 	

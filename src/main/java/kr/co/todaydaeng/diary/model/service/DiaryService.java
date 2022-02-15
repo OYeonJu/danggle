@@ -8,6 +8,8 @@ import kr.co.todaydaeng.myPage.model.vo.Dog;
 
 public interface DiaryService {
 
+	HashMap<String, Object> selectAllDogInfo(int currentPage, int memberNo);
+	
 	Dog selectDogInfo(HashMap<String, Integer> map);
 
 	ArrayList<Diary> calViewList(HashMap<String, Object> map2);
@@ -19,5 +21,9 @@ public interface DiaryService {
 	int insertDiary(Diary diary);
 
 	int deleteDiary(Diary diary);
+
+	
+
+	
 
 }

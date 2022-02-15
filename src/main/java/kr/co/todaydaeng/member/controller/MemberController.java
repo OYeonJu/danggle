@@ -125,7 +125,9 @@ public class MemberController {
 				model.addAttribute("member", m);
 				return "dormantMember";
 			default:
-				return "common/errorPage";
+				model.addAttribute("msg", "아이디와 비밀번호를 재확인 해주세요.");
+				model.addAttribute("location", "/resources/staticViews/member/login.jsp");
+				return "common/msg";
 			}
 		} else {
 			model.addAttribute("msg", "아이디와 비밀번호를 재확인 해주세요.");

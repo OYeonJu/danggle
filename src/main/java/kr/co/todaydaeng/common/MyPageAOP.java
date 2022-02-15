@@ -15,23 +15,36 @@ public class MyPageAOP {
 
 	@Autowired
 	private SHA256Util enc;
-	
+
 	@Pointcut("execution (kr.co.todaydaeng.member.model.vo.Member kr.co.todaydaeng.myPage.model.service.MyPageServiceImpl.selectPwdCheck(..))")
-	public void selectPwdCheckPointCut() {}
-	
+	public void selectPwdCheckPointCut() {
+	}
+
 	@Before("selectPwdCheckPointCut()")
 	public void selectPwdCheckPointEncryption(JoinPoint jp) throws Exception {
-		HashMap<String, String>map =(HashMap<String, String>)jp.getArgs()[0];
-		
-		String memberId=map.get("memberId");
-		String memberPwd=map.get("memberPwd");
-		
+		HashMap<String, String> map = (HashMap<String, String>) jp.getArgs()[0];
+
+		String memberId = map.get("memberId");
+		String memberPwd = map.get("memberPwd");
+
 		String encryptPwd = enc.encryptionData(memberPwd, memberId);
 		map.put("memberPwd", encryptPwd);
-		
+
 	}
-	
-	
-	
-	
+
+	@Pointcut("execution (int kr.co.todaydaeng.myPage.model.service.MyPageServiceImpl.withdrawCheck(..))")
+	public void withdrawCheckPointCut() {
+	}
+
+	@Before("withdrawCheckPointCut()")
+	public void withdrawCheckPointEncryption(JoinPoint jp) throws Exception {
+		HashMap<String, String> map = (HashMap<String, String>) jp.getArgs()[0];
+
+		String memberId = map.get("memberId");
+		String memberPwd = map.get("memberPwd");
+
+		String encryptPwd = enc.encryptionData(memberPwd, memberId);
+		map.put("memberPwd", encryptPwd);
+	}
+
 }

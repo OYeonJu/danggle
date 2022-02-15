@@ -35,6 +35,7 @@ public class AuthController {
 
 		// 발급받은 액세스 토큰으로 사용자 정보 요청
 		HashMap<String, Object> userInfo = authService.getUserInfo(access_Token);
+		userInfo.put("authProvider", "kakao");
 		String socialId = (String)userInfo.get("socialId"); //식별자
 		
 		// 카카오 고유 id값으로 해당 사용자가 이미 DB에 있는지 조회

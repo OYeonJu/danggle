@@ -1,7 +1,10 @@
 package kr.co.todaydaeng.common;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
+
+import kr.co.todaydaeng.diary.model.vo.Diary;
 
 public class Util {
 
@@ -12,10 +15,13 @@ public class Util {
 		int monthInt = 0;
 		
 		Calendar cal = Calendar.getInstance();
+		int yearNow=cal.get(Calendar.YEAR);
+		int monthNow=cal.get(Calendar.MONTH) + 1;
+		int dateNow=cal.get(Calendar.DATE);
+		
 		if (year == null || month == null) { // 처음 호출 할때 현재 년, 월로 설정
-
-			yearInt = cal.get(Calendar.YEAR);
-			monthInt = cal.get(Calendar.MONTH) + 1;
+			yearInt = yearNow;
+			monthInt = monthNow;
 		} else {
 			// 크기 비교를 위해 정수형으로 변환
 			yearInt = Integer.parseInt(year);
@@ -30,7 +36,6 @@ public class Util {
 				monthInt = 12;
 				yearInt--;
 			}
-
 		}
 		
 		// 현재 월 의 1일에 대한 요일 구하기 : 1~7 -> 1(일)~7(토)
@@ -42,6 +47,9 @@ public class Util {
 		int lastDay = cal.getActualMaximum(Calendar.DAY_OF_MONTH);
 
 		HashMap<String, Integer> calMap = new HashMap<>();
+		calMap.put("yearNow", yearNow);
+		calMap.put("monthNow", monthNow);
+		calMap.put("dateNow", dateNow);
 		calMap.put("year", yearInt);
 		calMap.put("month", monthInt);
 		calMap.put("dayOfWeek", dayOfWeek);
@@ -54,4 +62,18 @@ public class Util {
 	public static String isTwo(String msg) {
 		return (msg.length() < 2 ? "0" + msg : msg);
 	}
+	public String getCalViewList(int i , ArrayList<Diary> list) {
+		String date = Util.isTwo(i+"");
+		String writtenDairy="";
+		
+		for(Diary d:list) {
+			if(d.getScheduleDate().substring(6, 8).equals(date)) {
+				writtenDairy+= " <div style='border: 1px solid red; background-color:red;  width: 10px; height: 10px;border-radius: 100%; margin: 0 auto;position: relative;top: -20px;'></div>";
+			}
+		}
+
+		return writtenDairy;
+	}
+
+	
 }

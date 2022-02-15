@@ -34,7 +34,7 @@
 			SCHEDULEDATE as scheduleDate,
 			REGDATE as regDate  
 		from DIARY  
-		where MEMBER_NO=#{memberNo} AND SUBSTR(SCHEDULEDATE,1,6)=#{yyyyMM}
+		where MEMBER_NO=#{memberNo} AND DOG_NO=#{dogNo} AND SUBSTR(SCHEDULEDATE,1,6)=#{yyyyMM}
 	</select>
 	
 	<select id="selectDiary" parameterType="hashmap" resultType="diary">

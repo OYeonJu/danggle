@@ -102,7 +102,7 @@ public class MyPageDAO {
 		return sb.toString();
 	}
 
-	private int totalCount(int memberNo) {
+	public int totalCount(int memberNo) {
 		
 		return Integer.parseInt(sqlSession.selectOne("myPage.selectTotalCount", memberNo));
 	}

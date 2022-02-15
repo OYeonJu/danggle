@@ -140,7 +140,7 @@ integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="ano
       //닉네임 정규식
       $('#nickname').focusout(function(){
     	var nickname = $('#nickname').val();
-    	var nicknameRule = /^([a-zA-Zㄱ-ㅎ|ㅏ-ㅣ|가-힣]).{1,8}$/;
+    	var nicknameRule = /^([a-zA-Zㄱ-ㅎ|ㅏ-ㅣ|가-힣]).{1,7}$/;
 		if(!nicknameRule.test(nickname)){
 			$('#nickname').css('margin-bottom','0px');
 			$('#nicknameMsg').html("한글 또는 영문 최대 8글자로 입력해 주세요.").css('color','red');

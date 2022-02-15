@@ -32,17 +32,6 @@ public class MyPageController {
 	@Autowired
 	private ServletContext context;
 
-	/* 회원 정보 페이지 호출 */
-	@RequestMapping(value = "/myPage/memberInfoPage.do", method = RequestMethod.GET)
-	public String memberInfoPage(@SessionAttribute Member member) {
-
-		if (member == null) {
-			return "/resources/views/member/login.jsp";
-		} else {
-			System.out.println(member.getMemberProfile());
-			return "myPage/memberInfoPage";
-		}
-	}
 
 	/* 회원 정보 수정 전 PWD 확인 페이지 호출 */
 	@RequestMapping(value = "/myPage/checkPwdPage.do", method = RequestMethod.GET)
