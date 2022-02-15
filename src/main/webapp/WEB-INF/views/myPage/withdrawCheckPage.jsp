@@ -8,75 +8,9 @@
 <head>
 <meta charset="UTF-8">
 <title>비밀번호 확인</title>
+<link rel="stylesheet" type="text/css" href="/resources/css/withdrawCheckPage.css">
 
-    <style>
-        * {
-            box-sizing: border-box;
-			font-family: 'Noto Sans KR', sans-serif;
-            font-size: 15px;
-            font-weight: bold;
-            color: #919CA7;
-        }
-
-        .wrap {
-            /*border: 1px solid red;*/
-            width: 480px;
-            height: 280px;
-            margin: 0 auto;
-        }
-
-        .content {
-            /*border: 1px solid black;*/
-            width: 350px;
-            height: 120px;
-            margin: 0 auto;
-            text-align: center;
-            position: relative;
-            top: 70px;
-        }
-        
-        span{
-            margin-right: 15px;
-        }
-
-        input[type=password] {
-            width: 250px;
-            height: 37px;
-            border: 1px solid #919CA7;
-            border-radius: 5px;
-            padding: 0 8px 0 8px;
-        }
-
-        .pwd_change_btn {
-            border: 1px solid #FD6F22;
-            background-color: #FD6F22;
-            color:#ffffff;
-            width: 120px;
-            height: 40px;
-            border-radius: 5px;
-            cursor: pointer;
-            filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.10));
-
-        }
-    </style>
-
-</head>
-<body>
-
-    <div class='wrap'>
-
-        <div class='content'>
-            <div>
-            	<span>비밀번호</span> <input type='password' name='memberPwd' placeholder='비밀번호를 입력하세요.'>
-            </div>
-            <br>
-            <div>
-            	<button class="pwd_change_btn" onclick="checkPwd()">비밀번호 확인</button>
-            </div>
-        </div>
-
-    </div>
-    
+	<!-- 계정 탈퇴 처리 -->
     <script type="text/javascript">
     	function checkPwd() {
 			var memberPwd= $('input[name=memberPwd]').val();
@@ -101,8 +35,24 @@
 			});
 		}
     </script>
-    
 
+</head>
+<body>
+
+    <div class='wrap'>
+
+        <div class='content'>
+            <div>
+            	<span>비밀번호</span> <input type='password' name='memberPwd' placeholder='비밀번호를 입력하세요.'>
+            </div>
+            <br>
+            <div>
+            	<button class="pwd_change_btn" onclick="checkPwd()">비밀번호 확인</button>
+            </div>
+        </div>
+
+    </div>
+    
 </body>
 </html>
 

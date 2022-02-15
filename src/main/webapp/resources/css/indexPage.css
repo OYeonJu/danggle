@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #919CA7;
+}
+
+.wrap {
+	/* border: 1px solid red; */
+	width: 100%;
+	height: 2639px;
+	background: #FAFBFE;
+}
+
+
+
+/*container(컨테이너)*/
+.container {
+	/* border: 1px solid red; */
+	width: 100%;
+	height: 2162px;
+	margin: 0 auto;
+}
+
+.content {
+	/* border: 1px solid blue; */
+	width: 100%;
+	height: 720px;
+	margin: 0 auto;
+}
+
+#cal {
+	background-image: url(/resources/images/main_dairy.png);
+	background-size: 100% 100%;
+}
+
+#community {
+	background-image: url(/resources/images/main_community.png);
+	background-size: 100% 100%;
+}
+
+#hospital {
+	background-image: url(/resources/images/main_hospital.png);
+	background-size: 100% 100%;
+}
+

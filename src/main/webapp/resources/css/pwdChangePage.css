@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+* {
+	box-sizing: border-box;
+	font-family: 'Noto Sans KR', sans-serif;
+	font-size: 15px;
+	font-weight: bold;
+	color: #919CA7;
+}
+
+.wrap {
+	/*border: 1px solid red;*/
+	width: 520px;
+	height: 480px;
+	margin: 0 auto;
+}
+
+.content {
+	/*border: 1px solid black;*/
+	width: 520px;
+	margin: 0 auto;
+	position: relative;
+	top: 70px;
+}
+
+input[type=password] {
+	width: 330px;
+	height: 37px;
+	border: 1px solid #919CA7;
+	border-radius: 5px;
+	padding: 0 10px 0 10px;
+}
+
+.pwd_change_btn {
+	border: 1px solid #FD6F22;
+	background-color: #FD6F22;
+	color: #ffffff;
+	width: 120px;
+	height: 40px;
+	border-radius: 5px;
+	cursor: pointer;
+	filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.10));
+	margin: 0 13px;
+}
+
+.cancel_btn {
+	width: 67px;
+	height: 40px;
+	border: 1px solid #FD6F22;
+	background-color: #ffffff;
+	border-radius: 5px;
+	cursor: pointer;
+	filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.10));
+	margin: 0 13px;
+}
+
+table {
+	margin: 0 auto;
+}
+
+td {
+	vertical-align: top;
+	line-height: 40px;
+}
+
+tr>td:first-child {
+	width: 150px;
+	height: 80px;
+}
+
+.content>div:last-child {
+	/*border: 1px solid red;*/
+	text-align: center;
+	margin-top: 30px;
+}
+
+.txt_guide {
+	margin: 0 0 10px 0;
+	display: none;
+}
+
+.txt_guide>span {
+	color: red;
+	font-size: 12px;
+}
+
+#newMemberPwdCheck {
+	margin: 0;
+}
