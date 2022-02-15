@@ -10,9 +10,7 @@
 	width: 260px;
 }
 
-.h2{
-	margin-bottom:1rem;	
-}
+
 a{
   text-decoration:none;
 }
@@ -36,7 +34,7 @@ input::placeholder{
   position: relative;
   z-index: 1;
   background: #FFFFFF;
-  max-width: 400px;
+  max-width: 280px;
   margin: 105px auto;
   padding: 35px 70px 55px 70px;
   text-align: center;
@@ -60,7 +58,7 @@ input::placeholder{
   font-family: 'Noto Sans KR', sans-serif;
   outline: 0;
   background: #ffffff;
-  width: 185px;
+  width: 205px;
   border: 1px solid #b3b3b3;
   margin: 0 0 5px;
   padding: 8px;
@@ -96,7 +94,7 @@ input::placeholder{
   background: #ffffff;
   width: 70px;
   border: 0;
-  padding: 8px;
+  padding: 6px;
   color: #3c1e00;
   font-size: 15px;
   font-weight:bold;

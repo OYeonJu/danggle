@@ -10,7 +10,7 @@ body {
   font-family: 'Noto Sans KR', sans-serif;
   font-size: 15px;
   color: #919CA7;
-  background: #919CA7;
+  background: #fafbfe;
 }
 
 .header{
@@ -105,7 +105,7 @@ select {
 
 button {
   padding: 19px 39px 18px 39px;
-  color: #3c1e00;
+  color: white;
   background-color: #ff8000;
   font-size: 15px;
   font-weight: bold;
@@ -121,7 +121,7 @@ fieldset {
   margin-bottom: 10px;
   margin-top: 20px;
   border: none;
-  padding: 35px 70px 35px 70px;
+  padding: 20px;
 }
 
 legend {
@@ -205,6 +205,6 @@ label.light {
 @media screen and (min-width: 480px) {
 
   form {
-    max-width: 500px;
+    max-width: 430px;
   }
 }

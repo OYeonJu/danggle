@@ -9,7 +9,7 @@
 <link rel="stylesheet" type="text/css" href="/resources/css/loginForm.css">
 </head>
 <body>
-	<div class="header"><%@ include file="/WEB-INF/views/mainPageView/mainHeader.jsp" %></div>
+	<%@ include file="/WEB-INF/views/common/header.jsp"%>
 
 	  <div class="form">
 	    <form class="login-form" action="/member/loginMember.do" method="post">
@@ -23,7 +23,7 @@
 	      
 		  <!-- 카카오 로그인 -->
 		  <a href="https://kauth.kakao.com/oauth/authorize?client_id=81af0dfe58ccf188fe47f9f421528ad2&redirect_uri=http://localhost/login/kakao&response_type=code">
-		  	<image style="width:290px; margin-bottom:6px;" src="/resources/images/kakao_login_btn.png"></image>
+		  	<image style="width:290px; margin-bottom:2px;" src="/resources/images/kakao_login_btn.png"></image>
 		  </a>
 		  <!-- 네이버 로그인 -->
 		  <a href="https://nid.naver.com/oauth2.0/authorize?client_id=yvOnjHEnLyapFHXdjTK2&redirect_uri=http://localhost/login/naver&response_type=code">
@@ -32,7 +32,7 @@
 	    </form>
 	  </div>
 	  
-<%@ include file="/WEB-INF/views/mainPageView/mainFooter.jsp" %>
+<%@ include file="/WEB-INF/views/common/footer.jsp"%>
 
 </body>
 </html>
