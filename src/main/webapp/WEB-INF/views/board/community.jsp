@@ -15,7 +15,7 @@
     <!-- App css -->
     <link href="/resources/css/icons.min.css" rel="stylesheet" type="text/css"/>
     <link href="/resources/css/app-creative.min.css" rel="stylesheet" type="text/css" id="light-style"/>
-
+	
 </head>
 
 <style>
@@ -30,12 +30,9 @@
         width: 100%;
         margin: 0 auto;
         background-color: #FAFBFE;
+        margin-bottom: 150px;
     }
-
-    #header {
-        height: 240px;
-    }
-
+    
     #select {
         border: 1px solid #FD6F22;
         border-radius: 5px;
@@ -100,17 +97,15 @@
         text-align: center;
     }
 
-    #footer {
-        height: 235px;
-    }
 </style>
 <body>
 
-<div id="header">
-</div>
+<!--header(헤더)-->
+<%@ include file="/WEB-INF/views/board/boardHeader.jsp"%>
 
 <div style="height: 105px;"></div>
 <div class="wrap">
+
     <p id="commutitle">커뮤니티 게시판</p>
 
     <div id="searchdiv">
@@ -208,9 +203,10 @@
         	<a style="color: #FD6F22;" href="/board/community.do?currentPage=${nextNavi}&searchOption=${searchOption}&keyword=${keyword}">Next</a>
         </c:if>
     </div>
-
 </div>
-<div id="footer"></div>
+
+<!-- footer(푸터) -->
+<%@ include file="/WEB-INF/views/board/boardFooter.jsp"%>
 
 <script>
 		$('.deleteBtn').click(function(){

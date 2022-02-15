@@ -12,7 +12,6 @@
 <style>
     * {
         font-family: 'Noto Sans KR', sans-serif;
-        background-color: #FAFBFE;
         color: #919CA7;
         font-weight: bold;
     }
@@ -22,10 +21,6 @@
         margin: 0 auto;
         background-color: #FAFBFE;
         width: 1000px;
-    }
-
-    #header {
-        height: 240px;
     }
 
     #writetitle {
@@ -69,10 +64,7 @@
         float: right;
     }
 
-    #footer {
-        height: 235px;
-        clear: both;
-    }
+
     .ck-editor__editable {
        height: 550px;
        width: 979px;
@@ -89,10 +81,10 @@
 <!-- <script type="text/javascript" src="/resources/ckeditor/ckeditor.js"></script> -->
 
 <body>
-    <div id="header">
-    </div>
+<!--header(헤더)-->
+<%@ include file="/WEB-INF/views/common/header.jsp"%>
     <div style="height: 105px;"></div>
-    <div class="wrap">
+    <div class="wrap" style="margin-bottom:200px;background-color: #FAFBFE;">
         <p id="writetitle">글 작성하기</p>
         
 	<form id="form" action="/board/insertPost.do" method="post">
@@ -120,8 +112,8 @@
     </div>
     
     
-    
-    <div id="footer"></div> 
+    <!-- footer(풋터) -->
+    <%@ include file="/WEB-INF/views/common/footer.jsp"%>
     
     <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
 

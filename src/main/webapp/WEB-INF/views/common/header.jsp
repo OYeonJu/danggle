@@ -11,7 +11,6 @@
 	function index() {
 		location.replace('/');
 	}
-
 </script>
 
 
@@ -55,11 +54,11 @@
 			                    </ul>
 	                		</c:otherwise>
 	                	</c:choose>
-	                    
+
 	                </div>
 	            </div>
             </div>
         </div>
 
 </body>
-</html>
+</html> 

@@ -143,7 +143,7 @@ public class BoardController {
 			write.println("<script>alert('게시글 작성은 로그인한 회원만 가능합니다.');</script>");
 			write.flush();
 
-			return "index";
+			return "indexPage";
 
 		} else {
 			// 로그인이 되어있다면
