@@ -19,15 +19,11 @@
     }
 
     .wrap {
-        width: 100%;
         margin: 0 auto;
         background-color: #FAFBFE;
         width: 1000px;
     }
 
-    #header {
-        height: 240px;
-    }
 
     #writetitle {
         padding-top: 64px;
@@ -70,10 +66,6 @@
         float: right;
     }
 
-    #footer {
-        height: 235px;
-        clear: both;
-    }
     .ck-editor__editable {
        height: 550px;
        width: 979px;
@@ -90,10 +82,10 @@
 
 <body>
 
-    <div id="header">
-    </div>
+<!--header(헤더)-->
+<%@ include file="/WEB-INF/views/common/header.jsp"%>
     <div style="height: 105px;"></div>
-    <div class="wrap">
+    <div class="wrap" style="margin-bottom: 200px;">
         <p id="writetitle">글 수정하기</p>
 
 	<form id="form" action="/board/update.do" method="post" enctype="multipart/form-data">
@@ -127,7 +119,7 @@
 	</form>
     </div>
     
-    <div id="footer"></div> 
+    <%@ include file="/WEB-INF/views/common/footer.jsp"%>
     
     <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/classic/ckeditor.js"></script>
     

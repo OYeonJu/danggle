@@ -59,10 +59,8 @@
         width: 100%;
         margin: 0 auto;
         background-color: #FAFBFE;
-    }
-
-    #header {
-        height: 240px;
+        margin-bottom: 150px;
+        color: #919CA7;
     }
 
     #hospitaltitle {
@@ -122,16 +120,13 @@
         text-align: center;
     }
 
-    #footer {
-        height: 235px;
-    }  
 </style>
 
 
 <body>
 
-<div id="header">
-    </div>
+<!--header(헤더)-->
+<%@ include file="/WEB-INF/views/board/boardHeader.jsp"%>
     <div style="height: 105px;"></div>
     <div class="wrap">
         <p id="hospitaltitle">동물병원 정보 게시판</p>
@@ -375,7 +370,8 @@ function removeAllChildNods(el) {
 }
 </script>
     </div>
-<div id="footer"></div>    
+<!-- footer(풋터) -->
+    <%@ include file="/WEB-INF/views/board/boardFooter.jsp"%>   
 
 </body>
 </html>

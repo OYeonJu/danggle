@@ -1,11 +1,20 @@
 @charset "UTF-8";
 /*header(헤더)*/
+header {
+	position: relative;
+	/* box-shadow: 4px 4px 4px #DDD; */
+}
 .header {
 	/* border: 1px solid black; */
 	width: 100%;
 	height: 240px;
-	background: #FFFFFF;
-
+	/* background : #FFFFFF;*/
+	background-color: red;
+	position: relative;
+	
+}
+.header * {
+	position: static;
 }
 
 .headerfixed{
@@ -15,12 +24,14 @@
 	height: 240px;
 	/* position:fixed;
 	top: 0; */
+	position: relative;
 }
 
 .logo {
 	/* border: 1px solid blue; */
 	width: 100%;
 	height: 170px;
+	position: relative;
 }
 
 .logoImg {
@@ -29,31 +40,42 @@
 	height: 100%;
 	margin: 0 auto;
 	cursor:pointer;
-
+	
 	background-image: url(/resources/images/logo.png);
 	background-size: 100% 100%;
-
-
+	
+	
 }
 
 .navi {
 	/* border: 1px solid red; */
 	width: 100%;
 	height: 70px;
+	position: relative;
+	display: flex;
+	flex-flow: row nowrap;
 }
 
 .empty {
 	/* border: 1px solid red; */
 	width: 30%;
 	height: 100%;
-	float: left;
+	
+	
 }
+.navi .naviText {
+	flex: 0 0 700px;
+}
+.navi .btn--container {
+	flex: 0 0 300px;
+}
+
 
 .naviText {
 	/* border: 1px solid red; */
 	width: 40%;
 	height: 100%;
-	float: left;
+	
 	text-align: center;
 }
 
@@ -108,7 +130,7 @@
 	border: 1px solid #FD6F22;
 	box-sizing: border-box;
 	border-radius: 25px;
-	padding: 0 20px;
+	padding: 0 10px;
 	position: relative;
 	top: 11.5px;
 }
@@ -130,4 +152,4 @@
 	padding: 0 20px;
 	position: relative;
 	top: 11.5px;
-} 
+}

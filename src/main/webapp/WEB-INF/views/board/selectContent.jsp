@@ -11,9 +11,8 @@
  <style>
        * {
             font-family: 'Noto Sans KR', sans-serif;
-            background-color: #FAFBFE;
             font-weight: bold;
-            
+            color: #919CA7;
         }
 
         .wrap {
@@ -24,11 +23,8 @@
 
         .div {
             width: 1000px;
+            height:100%;
             margin: 0 auto;
-        }
-
-        #header {
-            height: 240px;
         }
 
         #subject {
@@ -163,10 +159,6 @@
             filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.10));
         }
 
-        #footer {
-            height: 235px;
-            clear: both;
-        }
         
        .image img{
         width: 300px;
@@ -174,11 +166,9 @@
     }
     </style>
    
-<div id="header">
-    </div>
+<%@ include file="/WEB-INF/views/common/header.jsp"%>
     <div style="height: 105px;"></div>
     <div class="wrap">
-    
         <div class="div">
 
             <p id="subject">${view.subject }</p>
@@ -206,7 +196,7 @@
             
             
             <!-- 댓글 -->
-            <div style="width: 100%; color: #919CA7;">
+            <div style="width: 100%; color: #919CA7; margin-bottom: 200px;">
             <c:forEach items="${comment }" var="c" >
              <div>
                 <span id="comments">
@@ -232,7 +222,9 @@
 
             </div>
         </div>
-        <div id="footer"></div>
-    </div>    
+        </div>
+        <!-- footer(푸터) -->
+<%@ include file="/WEB-INF/views/common/footer.jsp"%>
+ 
 </body>
 </html>

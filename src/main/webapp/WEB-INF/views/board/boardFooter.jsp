@@ -1,14 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<link rel="stylesheet" type="text/css" href="/resources/css/footer.css?d">
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
-	<div class="footer">
+
+<link rel="stylesheet" type="text/css" href="/resources/css/boardFooter.css">
+<footer>
+	<div class="footer inner">
 		<div class="footerInner">
 			<div class="footer_inner_left">
 				<div class="busyInfo">
@@ -31,5 +26,4 @@
 			</div>
 		</div>
 	</div>
-</body>
-</html> 
+</footer>
