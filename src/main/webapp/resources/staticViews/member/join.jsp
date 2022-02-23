@@ -160,7 +160,7 @@ integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="ano
 		        new daum.Postcode({
 		            oncomplete: function(data) { //선택시 입력값 세팅
 		                document.getElementById("address_kakao").value = data.address; //주소 넣기
-		                document.querySelector("input[name=detailAddress]").focus(); //상세입력 포커싱
+		                document.querySelector("input[name=addressDetail]").focus(); //상세입력 포커싱
 		            }
 		        }).open();
 		    });

@@ -67,8 +67,8 @@
 	          <br>
           
           <label for="address">주소</label>
-	      <input type="text" name="address" style="margin-bottom: 3px;"placeholder="주소">
-	      <input type="text" name="detailAddress" placeholder="상세 주소">
+	      <input type="text" name="address" id="address_kakao" style="margin-bottom: 3px;"placeholder="주소">
+	      <input type="text" name="addressDetail" placeholder="상세 주소">
        
         <button type="submit" onClick="checkForm()">가입하기</button>
         </fieldset>
@@ -83,7 +83,7 @@
 		        new daum.Postcode({
 		            oncomplete: function(data) { //선택시 입력값 세팅
 		                document.getElementById("address_kakao").value = data.address; //주소 넣기
-		                document.querySelector("input[name=address_detail]").focus(); //상세입력 포커싱
+		                document.querySelector("input[name=addressDetail]").focus(); //상세입력 포커싱
 		            }
 		        }).open();
 		    });
