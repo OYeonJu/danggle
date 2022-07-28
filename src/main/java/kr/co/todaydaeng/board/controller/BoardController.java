@@ -25,7 +25,6 @@ import org.springframework.web.bind.annotation.SessionAttribute;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.ckfinder.connector.plugins.ImageResize;
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
 import com.oreilly.servlet.MultipartRequest;

@@ -31,23 +31,22 @@ integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="ano
 <%@ include file="/WEB-INF/views/common/footer.jsp"%>
 
 <script>
-let x; // 전역 timer 변수
+let x; 
 
 function timer(){
 	var time = 180;
 	var min = "";
 	var sec = "";
 	
-	// Interval 초기화
 	clearInterval(x);
 	
 	x = setInterval(function(){
-		min = parseInt(time/60); //몫
-		sec = time%60; //나머지
+		min = parseInt(time/60); 
+		sec = time%60; 
 		$('#findIdCode').attr("placeholder", "6자리 코드 입력 " + " ["+min + "분 " + sec + "초]");
 		time--;
 		
-		//타임아웃시
+		//타임아웃
 		if(time < 0){
 			clearInterval(x);
 			alert('인증 시간이 초과되었습니다. 다시 전송해 주세요');

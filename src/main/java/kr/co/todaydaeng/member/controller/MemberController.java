@@ -141,17 +141,17 @@ public class MemberController {
 	public void sendEmailCode(String email, HttpServletResponse response) throws IOException {
 		Member m = mService.memberEmailCheck(email);
 		if (m != null) {
-			//난수 생성
+			//인증번호 생성
 			Random rd = new Random();
 			String key = Integer.toString(rd.nextInt(888888) + 111111);
 			
 			//이메일 정보
 			String setfrom = "admin@todaydaeng.co.kr";
-			String tomail = email; //받는 사람 
+			String tomail = email; 
 			String title = "[오늘의 댕댕] 아이디찾기 인증번호를 알려드립니다."; 
 			String content = "아이디 찾기를 위한 인증번호 입니다." + "[인증번호 : " + key + "]";
 			
-			//인증번호 정보 db에 저장
+			//인증 정보
 			EmailAuthHist emailAuthHist = new EmailAuthHist();
 			emailAuthHist.setMemberNo(m.getMemberNo());
 			emailAuthHist.setEmail(email);
@@ -161,10 +161,10 @@ public class MemberController {
 			try {
 				MimeMessage message = mailSender.createMimeMessage();
 				MimeMessageHelper messageHelper = new MimeMessageHelper(message, true, "UTF-8");
-				messageHelper.setFrom(setfrom); // 보내는사람 생략하면 정상작동을 안함
-				messageHelper.setTo(tomail); // 받는사람 이메일
-				messageHelper.setSubject(title); // 메일제목은 생략이 가능하다
-				messageHelper.setText(content); // 메일 내용
+				messageHelper.setFrom(setfrom); 
+				messageHelper.setTo(tomail); 
+				messageHelper.setSubject(title); 
+				messageHelper.setText(content);
 
 				mailSender.send(message);
 			} catch (Exception e) {
@@ -182,7 +182,6 @@ public class MemberController {
 		map.put("email", email);
 		map.put("findIdCode", findIdCode);
 
-		// 결과
 		HashMap<String, Object> result = new HashMap<String, Object>();
 		result = mService.checkIdCode(map);
 
@@ -198,12 +197,12 @@ public class MemberController {
 				new Gson().toJson(result,response.getWriter());
 				break;
 				 
-			case 1: // 성공;
+			case 1: // 성공
 				result.put("resultCode", resultCode);
 				new Gson().toJson(result, response.getWriter());
 				break;
 			}
-		//인증번호 불일치 (row 0개)
+		//인증번호 불일치
 		} else {
 			resultCode = "fail_key";
 			HashMap<String, Object> failResult = new HashMap<String, Object>();
